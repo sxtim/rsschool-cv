@@ -25,3 +25,25 @@ I want to gain knowledge and skills that will be enough to work in the company a
 - Git, GitHub
 - IntelliJ IDEA, Phpstorm
 - Linux User, Gimp
+- ---
+
+### Code example:
+
+Your task is to make a function that can take any non-negative integer as an argument and return it with its digits in descending order. Essentially, rearrange the digits to create the highest possible number.
+
+    function descendingOrder(n){
+     const arr = n.toString().split('');
+     for (let i = 0; i < arr.length; i++) {
+        let tmp = 0;
+        for (let j = 0; j < arr.length; j++) {
+            if (arr[i] > arr[j]){
+                tmp = arr[j];
+                arr[j] = arr[i];
+                arr[i] = tmp;
+            }
+         }
+      }
+     return Number(arr.join(''));  
+    }
+
+---
